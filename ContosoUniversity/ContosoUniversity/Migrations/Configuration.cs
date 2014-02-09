@@ -4,6 +4,7 @@ namespace ContosoUniversity.Migrations
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using ContosoUniversity.DAL;
     using ContosoUniversity.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ContosoUniversity.DAL.SchoolContext>
@@ -13,7 +14,7 @@ namespace ContosoUniversity.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(ContosoUniversity.DAL.SchoolContext context)
+        protected override void Seed(SchoolContext context)
         {
             var students = new List<Student>
             {
